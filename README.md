@@ -1,5 +1,7 @@
 # How to Boot Linux in a VM on Android 15+
 
+Guide originally by Christopher L. Crutchfield. Modified and added to by Bulat Valiakhmetov.
+
 ## Good to Mention
 
 * The device used here is a Xiaomi Poco C65 phone running Android 15
@@ -103,7 +105,7 @@ In a new session termux
 # ./crosvm run --disable-sandbox -p 'init=/sbin/init' --rwroot /data/data/com.termux/files/home/kvm/debian.img /data/data/com.termux/files/home/kvm/Image --vsock 3 --mem 1024 --cpus 2
 ```
 
-in the guest
+In the guest
 ```
 # cd /gvisor-tap-vsock
 # sudo chmod +x gvforwarder
@@ -208,16 +210,16 @@ On your technician machine, ssh <user>@<phone IP>. You should be connected to a 
 
 ## Gui via VNC
 
-in the guest
+In the guest
 
 ```
 # sudo apt install tightvncserver, xfce4
 # vncserver
 ```
 
-setting vnc
+Setting vnc
 
-install vncviewer on your phone
+Install vncviewer on your phone
 
 Grab the IP Address of the phone from its setting page.
 
@@ -225,7 +227,7 @@ In a new session termux
 ```
 # ssh -L 5901:127.0.0.1:5901 -C -N -l <user> <phone IP>
 ```
-open vncviewer app
+Open vncviewer app
 
 localhost
 
@@ -235,40 +237,40 @@ vncserver password
 
 ## Shared dir
 
-in termux
+In termux
 ```
 # mkdir host_shared_dir
 # su
 # cd /apex/com.android.virt/bin
 # ./crosvm run --disable-sandbox --shared-dir "/data/data/com.termux/files/home/host_shared_dir:my_shared_tag:type=fs" -p 'init=/sbin/init' --rwroot /data/data/com.termux/files/home/kvm/debian.img /data/data/com.termux/files/home/kvm/Image --vsock 3 --mem 1024 --cpus 2
 ```
-in the guest
+In the guest
 
 ```
 # sudo su
 # mkdir /tmp/guest_shared_dir
 # mount -t virtiofs my_shared_tag /tmp/guest_shared_dir
 ```
-use /tmp/guest_shared_dir and /data/data/com.termux/files/home/host_shared_dir
+Use /tmp/guest_shared_dir and /data/data/com.termux/files/home/host_shared_dir
 
 ## Troubleshooting
 
 ping 8.8.8.8 work but network cant
 
-solution: enable hotspot on android
+Solution: enable hotspot on android
 
 ERRO[0000] gvproxy exiting: cannot listen: listen unix /data/data/com.termux/files/home/kvm/vm-host/network.sock: bind: address already in use
 
-solution: delete network.sock
+Solution: delete network.sock
 
 ERRO[0000] gvproxy exiting: cannot add network services: listen tcp 127.0.0.1:2222: bind: address already in use
 
-solution: reboot phone
+Solution: reboot phone
 
 socket: address family not supported by protocol
 
-solution: enable CONFIG_VSOCKETS
+Solution: enable CONFIG_VSOCKETS
 
 Connection closed by {ip_address} or  error: kex_exchange_identification: Connection closed by remote host
 
-solution: install openssh-server or make linux distro with openssh-server
+Solution: install openssh-server or make linux distro with openssh-server

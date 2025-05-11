@@ -245,17 +245,17 @@ use /tmp/guest_shared_dir and /data/data/com.termux/files/home/host_shared_dir
 
 ## Troubleshooting
 
-### ping 8.8.8.8 work but network cant
+ping 8.8.8.8 work but network cant
 solution: enable hotspot on android
 
-### ERRO[0000] gvproxy exiting: cannot listen: listen unix /data/data/com.termux/files/home/kvm/vm-host/network.sock: bind: address already in use
+ERRO[0000] gvproxy exiting: cannot listen: listen unix /data/data/com.termux/files/home/kvm/vm-host/network.sock: bind: address already in use
 solution: delete network.sock
 
-### ERRO[0000] gvproxy exiting: cannot add network services: listen tcp 127.0.0.1:2222: bind: address already in use
+ERRO[0000] gvproxy exiting: cannot add network services: listen tcp 127.0.0.1:2222: bind: address already in use
 solution: reboot phone
 
-### socket: address family not supported by protocol
+socket: address family not supported by protocol
 solution: enable CONFIG_VSOCKETS
 
-### Connection closed by {ip_address} or  error: kex_exchange_identification: Connection closed by remote host
+Connection closed by {ip_address} or  error: kex_exchange_identification: Connection closed by remote host
 solution:install openssh-server or make linux distro with openssh-server

@@ -26,7 +26,7 @@ $ tar -xvf linux-x.x.xx.tar.xz
 $ cd linux-x.x.xx
 $ make ARCH=arm64 defconfig
 ```
-[enable from this config](https://github.com/bvucode/Crosvm-on-android/common.config)
+[enable from this config](https://github.com/bvucode/Crosvm-on-android/blob/main/common.config)
 
 ```
 $ make menuconfig

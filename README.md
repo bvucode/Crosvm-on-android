@@ -226,7 +226,9 @@ In a new session termux
 open vncviewer app
 
 localhost
+
 5901
+
 vncserver password
 
 ## Shared dir

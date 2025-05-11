@@ -218,7 +218,9 @@ in the guest
 setting vnc
 
 install vncviewer on your phone
+
 Grab the IP Address of the phone from its setting page.
+
 In a new session termux
 ```
 # ssh -L 5901:127.0.0.1:5901 -C -N -l <user> <phone IP>
@@ -269,4 +271,4 @@ solution: enable CONFIG_VSOCKETS
 
 Connection closed by {ip_address} or  error: kex_exchange_identification: Connection closed by remote host
 
-solution:install openssh-server or make linux distro with openssh-server
+solution: install openssh-server or make linux distro with openssh-server

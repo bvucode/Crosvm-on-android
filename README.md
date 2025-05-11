@@ -260,6 +260,10 @@ ping 8.8.8.8 work but network cant
 
 Solution: enable hotspot on android
 
+ping 8.8.8.8 Network is unreachable
+
+Solution: again in the guest sudo chmod +x gvforwarder
+
 ERRO[0000] gvproxy exiting: cannot listen: listen unix /data/data/com.termux/files/home/kvm/vm-host/network.sock: bind: address already in use
 
 Solution: delete network.sock

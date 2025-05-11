@@ -279,3 +279,7 @@ Solution: enable CONFIG_VSOCKETS
 Connection closed by {ip_address} or  error: kex_exchange_identification: Connection closed by remote host
 
 Solution: install openssh-server or make linux distro with openssh-server
+
+erro dhcp not found
+
+Solution: make linux distro with dhclient

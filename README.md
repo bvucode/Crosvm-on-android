@@ -96,7 +96,7 @@ vm-host.img
 # cd /data/data/com.termux/files/home/kvm/vm-host/gvisor-tap-vsock
 # ./gvproxy -debug -listen vsock://:1024 -listen unix:///data/data/com.termux/files/home/kvm/vm-host/network.sock
 ```
-In a second table of termux
+In a new session termux
 ```
 # su
 # cd /apex/com.android.virt/bin
@@ -195,7 +195,7 @@ Copy packages to the phone in /data/data/com.termux/files/home/kvm
 cd /kvm/vm-host
 # ./start-network.sh
 ```
-In a second table of termux
+In a new session termux
 ```
 # cd /kvm/vm-host
 # ./start-vm.sh

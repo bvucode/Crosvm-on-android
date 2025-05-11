@@ -76,7 +76,7 @@ $ sudo umount ./vm-host
 ```
 
 ## Install Termux from F-Droid. In Termux:
-``
+```
 # termux-setup-storage
 # mkdir kvm
 # mkdir ./kvm/vm-host

@@ -195,7 +195,7 @@ Copy packages to the phone in /data/data/com.termux/files/home/kvm
 ```
 # su
 # mount kvm/vm-host.img kvm/vm-host
-cd /kvm/vm-host
+# cd /kvm/vm-host
 # ./start-network.sh
 ```
 In a new session termux
@@ -280,6 +280,6 @@ Connection closed by {ip_address} or  error: kex_exchange_identification: Connec
 
 Solution: install openssh-server or make linux distro with openssh-server
 
-erro dhcp not found
+ERRO dhcp not found
 
 Solution: make linux distro with dhclient

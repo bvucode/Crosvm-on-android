@@ -96,6 +96,7 @@ vm-host.img
 # su
 # mount ./kvm/vm-host.img ./kvm/vm-host
 # cd /data/data/com.termux/files/home/kvm/vm-host/gvisor-tap-vsock
+# chmod +x gvproxy
 # ./gvproxy -debug -listen vsock://:1024 -listen unix:///data/data/com.termux/files/home/kvm/vm-host/network.sock
 ```
 In a new session termux
@@ -208,7 +209,7 @@ Grab the IP Address of the phone from its setting page.
 
 On your technician machine, ssh <user>@<phone IP>. You should be connected to a machine with the hostname vm.
 
-## Gui via VNC
+## GUI via VNC
 
 In the guest
 

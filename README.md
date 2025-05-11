@@ -64,6 +64,7 @@ $ sudo vim ./rootfs/etc/systemd/resolved.conf.d/dns_servers.conf
 Set the value to the following
 
 [Resolve]
+
 DNS=8.8.8.8 1.1.1.1
 ```
 $ sudo chroot ./rootfs /bin/bash

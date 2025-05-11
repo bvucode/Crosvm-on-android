@@ -35,11 +35,13 @@ $ CROSS_COMPILE=aarch64-linux-gnu- make ARCH=arm64 -j 8
 ## Cross-compile gVisor Proxy for aarch64
 
 git clone https://github.com/containers/gvisor-tap-vsock gvisor-tap-vsock-arm64
+
 GOARCH=arm64 make
 
 ## Cross-compile gVisor Proxy for Android
 
 git clone https://github.com/containers/gvisor-tap-vsock gvisor-tap-vsock-android
+
 GOOS=android GOARCH=arm64 make
 
 ## Create a rootfs
@@ -84,7 +86,9 @@ $ sudo umount ./vm-host
 Copy to the phone in /data/data/com.termux/files/home/kvm
 
 debian.img
+
 vm-host.img
+
 ./linux-x.x.xx/arch/arm64/boot/Image
 ```
 # su

@@ -266,4 +266,5 @@ socket: address family not supported by protocol
 solution: enable CONFIG_VSOCKETS
 
 Connection closed by {ip_address} or  error: kex_exchange_identification: Connection closed by remote host
+
 solution:install openssh-server or make linux distro with openssh-server

@@ -116,7 +116,7 @@ or
 # sudo ./gvforwarder --debug > /dev/null 2>&1 &
 # ping 8.8.8.8
 ```
-## SSH to be able to ssh into the device
+### SSH
 ```
 $ sudo mount vm-host.img vm-host/
 $ sudo mount debian.img rootfs/
@@ -192,7 +192,7 @@ $ umount ./vm-host
 
 Copy packages to the phone in /data/data/com.termux/files/home/kvm
 
-## In termux
+In termux
 ```
 # su
 # mount kvm/vm-host.img kvm/vm-host

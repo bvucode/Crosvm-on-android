@@ -1,4 +1,4 @@
-# How to Boot Linux in a VM on Android 15+
+# How to boot linux in a vm on Android 15+
 
 Guide originally by Christopher L. Crutchfield. Modified and added to by Bulat Valiakhmetov.
 
@@ -86,7 +86,7 @@ $ sudo umount ./vm-host
 # mkdir kvm
 # mkdir ./kvm/vm-host
 ```
-Copy to the phone in /data/data/com.termux/files/home/kvm
+Copy packages to the phone in /data/data/com.termux/files/home/kvm
 
 debian.img
 
@@ -219,9 +219,7 @@ In the guest
 # vncserver
 ```
 
-Setting vnc
-
-Install vncviewer on your phone
+Setting vncserver
 
 Grab the IP Address of the phone from its setting page.
 
@@ -229,13 +227,15 @@ In a new session termux
 ```
 # ssh -L 5901:127.0.0.1:5901 -C -N -l <user> <phone IP>
 ```
+Install vncviewer app on your phone
+
 Open vncviewer app
 
 localhost
 
 5901
 
-vncserver password
+vncserver's password
 
 ## Shared dir
 
@@ -249,9 +249,9 @@ In termux
 In the guest
 
 ```
-# sudo su
-# mkdir /tmp/guest_shared_dir
-# mount -t virtiofs my_shared_tag /tmp/guest_shared_dir
+$ sudo su
+$ mkdir /tmp/guest_shared_dir
+$ mount -t virtiofs my_shared_tag /tmp/guest_shared_dir
 ```
 Use /tmp/guest_shared_dir and /data/data/com.termux/files/home/host_shared_dir
 

@@ -109,12 +109,12 @@ In a new session termux
 
 In the guest
 ```
-# cd /gvisor-tap-vsock
-# sudo chmod +x gvforwarder
-# sudo ./gvforwarder --debug &
+$ cd /gvisor-tap-vsock
+$ sudo chmod +x gvforwarder
+$ sudo ./gvforwarder --debug &
 or
-# sudo ./gvforwarder --debug > /dev/null 2>&1 &
-# ping 8.8.8.8
+$ sudo ./gvforwarder --debug > /dev/null 2>&1 &
+$ ping 8.8.8.8
 ```
 ### SSH
 ```
@@ -215,8 +215,8 @@ On your technician machine, ssh <user>@<phone IP>. You should be connected to a 
 In the guest
 
 ```
-# sudo apt install tightvncserver, xfce4
-# vncserver
+$ sudo apt install tightvncserver, xfce4
+$ vncserver
 ```
 
 Setting vncserver

@@ -59,7 +59,7 @@ $ sudo mount debian.img rootfs/
 $ sudo debootstrap --arch=arm64 buster rootfs/
 $ echo "vm" | sudo tee ./rootfs/etc/hostname
 $ sudo mkdir -p ./rootfs/etc/systemd/resolved.conf.d/
-$ sudo vim ./rootfs/etc/systemd/resolved.conf.d/dns_servers.conf
+$ sudo nvim ./rootfs/etc/systemd/resolved.conf.d/dns_servers.conf
 ```
 Set the value to the following
 

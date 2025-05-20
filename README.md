@@ -53,7 +53,7 @@ $ dd if=/dev/zero of=vm-host.img bs=1M count=1000
 $ mkfs.ext4 vm-host.img
 $ sudo mount vm-host.img vm-host
 $ mkdir rootfs
-$ dd if=/dev/zero of=debian.img bs=1M count=12000
+$ dd if=/dev/zero of=debian.img bs=1M count=32000
 $ sudo mkfs.ext4 debian.img
 $ sudo mount debian.img rootfs/
 $ sudo debootstrap --arch=arm64 buster rootfs/

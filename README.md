@@ -165,7 +165,7 @@ $ sudo nvim ./start-network.sh
 ```
 Set the value to the following
 ```
-#! /system/bin/sh
+#!/data/data/com.termux/files/usr/bin/sh
 
 /data/data/com.termux/files/home/kvm/vm-host/gvisor-tap-vsock/gvproxy -listen vsock://:1024 -listen unix:///data/data/com.termux/files/home/kvm/vm-host/network.sock &
 sleep 1
@@ -177,7 +177,7 @@ $ sudo nvim ./start-vm.sh
 ```
 Set the value to the following
 ```
-#! /system/bin/sh
+#!/data/data/com.termux/files/usr/bin/sh
 
 /apex/com.android.virt/bin/crosvm run --disable-sandbox -p 'init=/sbin/init' --rwroot /data/data/com.termux/files/home/kvm/debian.img /data/data/com.termux/files/home/kvm/Image --vsock 3 --mem 1024 --cpus 2
 ```
